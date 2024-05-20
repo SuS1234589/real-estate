@@ -1,4 +1,8 @@
 <script>
+  // This is the logo import
+  import '@fortawesome/fontawesome-free/css/all.min.css';
+  
+  // This is for the Navbar (i think, already forgot)
   import { onMount } from 'svelte';
 
   let scrolled = false;
@@ -14,6 +18,7 @@
     scrolled = window.scrollY > 0;
   }
 
+  // This is the counter
   let count = 0;
   const increaseCount = () => {
     count++;
@@ -22,6 +27,7 @@
   onMount(() => {
     increaseCount();
   });
+  
 </script>
 
 <!-- Navbar -->
@@ -53,17 +59,17 @@
     </div>
   </section>
 
+  <section id="About Us" class="section">
+    <div class="section-content">
+      <h2>About Us</h2>
+      <p>This is the About Us section. Describe your story or your background.</p>
+    </div>
+  </section>
+
   <section id="services" class="section">
     <div class="section-content">
       <h2>Our Services</h2>
       <p>This is the Our Services section. Describe your services or products here.</p>
-    </div>
-  </section>
-
-  <section id="contact" class="section">
-    <div class="section-content">
-      <h2>Contact Us</h2>
-      <p>This is the Contact Us section. Provide your contact information or a contact form here.</p>
     </div>
   </section>
 
@@ -76,28 +82,23 @@
 </main>
 
 <!-- Footer -->
-<footer>
+<footer class="footer">
   <div class="container">
     <div class="row">
         <div class="col-md-4">
-            <h4>About Us</h4>
-            <p>Something</p>
+          <h4>Contact Info</h4>
+          <p>Email: info@example.com<br>Phone: +1 (123) 456-7890</p>
         </div>
-        <div class="col-md-4">
-            <h4>Contact Info</h4>
-            <p>Email: info@example.com<br>Phone: +1 (123) 456-7890</p>
-        </div>
-        <div class="col-md-4">
-            <h4>Follow Us</h4>
-            <a href="#">Facebook</a>
-            <a href="#">Twitter</a>
-            <a href="#">Instagram</a>
-        </div>
+        <!-- This is the logo part -->
+        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
     </div>
   </div>
 </footer>
 
 <style>
+  /* This is nav style */
   nav {
     position: fixed;
     top: 0;
@@ -138,6 +139,7 @@
     color: #007bff;
   }
 
+  /* This is the main body style */
   main {
     padding: 20px;
   }
@@ -152,10 +154,20 @@
     text-align: center;
   }
 
-  footer {
-    background-color: #333; 
-    color: #fff; 
-    padding: 20px; 
+  /* This is the footer style */
+  .footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
     text-align: center;
+  }
+  .footer a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 24px;
+  }
+  .footer a:hover {
+    color: #ddd;
   }
 </style>
